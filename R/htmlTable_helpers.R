@@ -34,7 +34,7 @@ prTblNo <- function (caption) {
 
 #' Gets the CSS style element
 #'
-#' A funciton for checking, merging, and more
+#' A function for checking, merging, and more
 #' with a variety of different style formats.
 #'
 #' @param styles The styles can be provided as \code{vector},
@@ -122,7 +122,7 @@ prGetStyle <- function(...){
     styles <- styles[-grep("^background-color:", styles)]
     styles <-
       c(styles,
-        paste0("background-color: ", clr))
+        paste0("background-color: ", clr, " !important"))
   }
 
   style_names <- gsub("^([^:]+).+", "\\1", styles)
